@@ -23,6 +23,7 @@ def add_cart(request, product_id):
                 print(variation)
             except Exception as e:
                 raise e
+                
     product = Product.objects.get(id=product_id)
     try:
         cart = Cart.objects.get(cart_id=_cart_id(request))
