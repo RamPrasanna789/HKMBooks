@@ -93,16 +93,29 @@ $(document).ready(function() {
 				<a href="{% url 'cart' %}" class="icon icon-sm rounded-circle border"><i class="fa fa-shopping-cart"></i></a>
 				<span class="badge badge-pill badge-danger notify">{{cart_count}}</span>
 			</div>
+			{% if user.id is None %}
 			<div class="widget-header icontext">
 				<a href="#" class="icon icon-sm rounded-circle border"><i class="fa fa-user"></i></a>
 				<div class="text">
-					<span class="text-muted">Welcome!</span>
+					<span class="text-muted">Hare Krishna guest!</span>
 					<div> 
-						<a href="#">Sign in</a> |  
-						<a href="#"> Register</a>
+						<a href="/accounts/login">Sign in</a> |  
+						<a href="/accounts/register"> Register</a>
 					</div>
 				</div>
 			</div>
+			{% else %}
+			<div class="widget-header icontext">
+				<a href="#" class="icon icon-sm rounded-circle border"><i class="fa fa-user"></i></a>
+				<div class="text">
+					<span class="text-muted">Hare Krishna {{user.first_name}}!</span>
+					<div> 
+						<a href="{% url 'dashboard' %}">Dashboard</a> |  
+						<a href="{% url 'logout' %}">Logout</a>
+					</div>
+				</div>
+			</div>
+			{% endif %}
 		</div> <!-- widgets-wrap.// -->
 	</div> <!-- col.// -->
 </div> <!-- row.// -->
@@ -138,11 +151,7 @@ $(document).ready(function() {
 
 
 <!-- ========================= SECTION INTRO ========================= -->
-<section class="section-intro padding-y-sm">
-<div class="container">
 
-</div> <!-- container //  -->
-</section>
 <!-- ========================= SECTION INTRO END// ========================= -->
 
 
@@ -150,16 +159,8 @@ $(document).ready(function() {
 
 
 <!-- ========================= SECTION CONTENT ========================= -->
-<section class="section-content">
-<div class="container">
-
-<header class="section-heading">
-	
-</header><!-- sect-heading -->
-
-</div>
-</section>
-
+<br>
+<br>
 {% block content %}
 {% load static %}
 {% endblock %}
