@@ -10,7 +10,7 @@
     <div class="card">
         <div class="card-body">
             <h4 class="card-title mb-4">Billing Address</h4>
-            <form action="" method="POST">
+            <form action="{% url 'place_order' %}" method="POST">
                 {% csrf_token %}
                 <div class="form-row">
                     <div class="col form-group">
@@ -29,7 +29,7 @@
                     </div>
                     <div class="col form-group">
                         <label for="">Phone Number</label>
-                        <input type="text" name="phone_number" id="phone_number" class="form-control" placeholder="Phone Number" required>
+                        <input type="text" name="phone" id="phone" class="form-control" placeholder="Phone Number" required>
                     </div>
                 </div>
                 <div class="form-row">
