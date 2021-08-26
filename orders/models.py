@@ -16,9 +16,10 @@ class Payment(models.Model):
 
 class Order(models.Model):
     STATUS = (
-        ('New', 'New'),
-        ('Accepted', 'Accepted'),
-        ('Completed', 'Completed'),
+        ('Yet To Be Dispatched', 'Yet To Be Dispatched'),
+        ('Dispatched', 'Dispatched'),
+        ('On The Way', 'On The Way'),
+        ('Deliveried', 'Deliveried'),
         ('Cancelled', 'Cancelled'),
     )
 
@@ -37,7 +38,7 @@ class Order(models.Model):
     order_note = models.CharField(max_length=100, blank=True)
     order_total = models.FloatField(blank=True)
     shipping_charges = models.IntegerField()
-    status = models.CharField(max_length=10, choices=STATUS, default='New')
+    status = models.CharField(max_length=100, choices=STATUS, default='New')
     order_id = models.CharField(max_length=900, blank=True)
     razorpay_order_id = models.CharField(max_length=1000, blank=True)
     ip = models.CharField(blank=True, max_length=20)
