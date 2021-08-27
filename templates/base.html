@@ -76,7 +76,7 @@ $(document).ready(function() {
 <div class="row align-items-center">
 	<div class="col-lg-2 col-6">
 		<a href="/" class="brand-wrap">
-			<h3>𝓗𝓚𝓜 𝓑𝓞𝓞𝓚𝓢</h3>
+            <h3>𝓗𝓚𝓜 <span style="color: gray;">𝓑𝓞𝓞𝓚𝓢</span></h3>
 		</a> <!-- brand-wrap.// -->
 	</div>
 	<div class="col-lg-6 col-12 col-sm-12">
@@ -128,28 +128,6 @@ $(document).ready(function() {
 </header> <!-- section-header.// -->
 
 
-<nav class="navbar navbar-main navbar-expand-lg navbar-light border-bottom">
-  <div class="container">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-controls="main_nav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="main_nav">
-      <ul class="navbar-nav">
-      	<li class="nav-item dropdown">
-          <a class="nav-link pl-0" data-toggle="dropdown" href="#"><strong> <i class="fa fa-bars"></i> &nbsp  All category</strong></a>
-          <div class="dropdown-menu">
-			<a class="dropdown-item" href="{% url 'store' %}">All Products</a>
-			  {% for category in links %}
-            	<a class="dropdown-item" href="{{category.get_url}}">{{category.category}}</a>
-			  {% endfor %}
-          </div>
-        </li>
-      </ul>
-    </div> <!-- collapse .// -->
-  </div> <!-- container .// -->
-</nav>
-
 </header> <!-- section-header.// -->
 
 
@@ -170,79 +148,100 @@ $(document).ready(function() {
 {% endblock %}
 
 
-<!-- ========================= FOOTER ========================= -->
-<footer class="section-footer border-top bg">
-	<div class="container">
-		<section class="footer-top  padding-y">
-			<div class="row">
-				<aside class="col-md col-6">
-					<h6 class="title">Brands</h6>
-					<ul class="list-unstyled">
-						<li> <a href="#">Adidas</a></li>
-						<li> <a href="#">Puma</a></li>
-						<li> <a href="#">Reebok</a></li>
-						<li> <a href="#">Nike</a></li>
-					</ul>
-				</aside>
-				<aside class="col-md col-6">
-					<h6 class="title">Company</h6>
-					<ul class="list-unstyled">
-						<li> <a href="#">About us</a></li>
-						<li> <a href="#">Career</a></li>
-						<li> <a href="#">Find a store</a></li>
-						<li> <a href="#">Rules and terms</a></li>
-						<li> <a href="#">Sitemap</a></li>
-					</ul>
-				</aside>
-				<aside class="col-md col-6">
-					<h6 class="title">Help</h6>
-					<ul class="list-unstyled">
-						<li> <a href="#">Contact us</a></li>
-						<li> <a href="#">Money refund</a></li>
-						<li> <a href="#">Order status</a></li>
-						<li> <a href="#">Shipping info</a></li>
-						<li> <a href="#">Open dispute</a></li>
-					</ul>
-				</aside>
-				<aside class="col-md col-6">
-					<h6 class="title">Account</h6>
-					<ul class="list-unstyled">
-						<li> <a href="#"> User Login </a></li>
-						<li> <a href="#"> User register </a></li>
-						<li> <a href="#"> Account Setting </a></li>
-						<li> <a href="#"> My Orders </a></li>
-					</ul>
-				</aside>
-				<aside class="col-md">
-					<h6 class="title">Social</h6>
-					<ul class="list-unstyled">
-						<li><a href="#"> <i class="fab fa-facebook"></i> Facebook </a></li>
-						<li><a href="#"> <i class="fab fa-twitter"></i> Twitter </a></li>
-						<li><a href="#"> <i class="fab fa-instagram"></i> Instagram </a></li>
-						<li><a href="#"> <i class="fab fa-youtube"></i> Youtube </a></li>
-					</ul>
-				</aside>
-			</div> <!-- row.// -->
-		</section>	<!-- footer-top.// -->
-
-		<section class="footer-bottom row">
-			<div class="col-md-2">
-				<p class="text-muted"> &copy 2019 Company name </p>
-			</div>
-			<div class="col-md-8 text-md-center">
-				<span  class="px-2">info@pixsellz.io</span>
-				<span  class="px-2">+879-332-9375</span>
-				<span  class="px-2">Street name 123, Avanue abc</span>
-			</div>
-			<div class="col-md-2 text-md-right text-muted">
-				<i class="fab fa-lg fa-cc-visa"></i>
-				<i class="fab fa-lg fa-cc-paypal"></i>
-				<i class="fab fa-lg fa-cc-mastercard"></i>
-			</div>
-		</section>
-	</div><!-- //container -->
-</footer>
-<!-- ========================= FOOTER END // ========================= -->
-
+<footer class="text-center text-lg-start bg-dark text-muted" style="background-color: black; color: white;">
+	<!-- Section: Social media -->
+	<br>
+	<section class="">
+	  <div class="container text-center text-md-start mt-5">
+		<!-- Grid row -->
+		<div class="row mt-3">
+		  <!-- Grid column -->
+		  <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+			<!-- Content -->
+			<h6 class="text-uppercase fw-bold mb-4">
+			HKM BOOKS
+			</h6>
+			<p>
+			  <b>HKM BOOKS has been distributing the transcedental litratures of His Divine Grace A.C Bakthi Vedanta Swami Srila Prabhupada scince 2015</b>
+			</p>
+		  </div>
+		  <!-- Grid column -->
+  
+		  <!-- Grid column -->
+		  <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+			<!-- Links -->
+			<h6 class="text-uppercase fw-bold mb-4">
+			  Brands
+			</h6>
+			<b>
+			  <p>
+				<a class="text-reset">BBT</a>
+			  </p>
+			  <p>
+				<a class="text-reset">Goloka</a>
+			  </p>  
+			</b>
+		  </div>
+		  <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+			<!-- Links -->
+			<h6 class="text-uppercase fw-bold mb-4">
+			  Contact
+			</h6>
+			  <b>Swayambhu Sri Lakshmi Narasimha Swamy Kshetram, NBT Nagar, Road No 12,
+  
+				Banjara Hills, Near Anti Corruption Bureau office,
+				
+				Hyderabad-500034</b>
+			</p>
+			<p>
+			  <b>rampkrishna6212@gmail.com</b>
+			</p>
+		  </div>
+		  <!-- Grid column -->
+		</div>
+		<!-- Grid row -->
+	  </div>
+	  <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+		<!-- Links -->
+		<h6 class="text-uppercase fw-bold mb-4">
+		  Our Shipping Partners
+		</h6>
+		<b>
+		  <p>
+			<a class="text-reset"><img src="https://assets.turbologo.com/blog/en/2019/12/19084817/Fedex-logo.png" alt="" height="65px" width="100px"> <img src="https://i.ytimg.com/vi/Xu4el0LXhng/maxresdefault.jpg" alt="" height="63px" width="100px"></a>
+		  </p>
+		  <p>
+			<a class="text-reset"><img src="https://indianorphanage.com/io/wp-content/uploads/2014/02/dtdc-courier-logo-1.jpg" alt="" width="100px"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5zg2wTRBK6rwEwNcwlvI-X9EHE5zaH77VqzBTz75QE1uDAtRC1llmvqjEPD-5f3fONSo&usqp=CAU" alt="" width="100px" height="63px"></a>
+		  </p>  
+		</b>
+	  </div>
+	</section>
+  
+	<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+	  &copy; 2021 Copyright:
+	  <a class="text-reset fw-bold" href="/">HKMBooks.com</a>
+	</div>
+	<!-- Copyright -->
+  </footer>
+  
 </body>
 </html>
+<!-- GetButton.io widget -->
+<script type="text/javascript">
+    (function () {
+        var options = {
+            whatsapp: "9502753353", // WhatsApp number
+            call: "+91 9502753353", // Call phone number
+            call_to_action: "Contact Us", // Call to action
+            button_color: "#129BF4", // Color of button
+            position: "right", // Position may be 'right' or 'left'
+            order: "whatsapp,call", // Order of buttons
+            pre_filled_message: "Hare Krishna. Welcome to HKM Books.", // WhatsApp pre-filled message
+        };
+        var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    })();
+</script>
+<!-- /GetButton.io widget -->

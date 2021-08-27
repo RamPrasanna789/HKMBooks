@@ -13,3 +13,6 @@ class AccountAdmin(UserAdmin):
     list_filter = ()
     fieldsets = ()    
 admin.site.register(Account, AccountAdmin)
+admin.site.index_title = 'HKM BOOKS'
+admin.site.site_title = 'HKM BOOKS'
+admin.site.site_header = 'HKM BOOKS'

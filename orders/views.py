@@ -79,7 +79,7 @@ def place_order(request):
 
 
 def invoice(request):
-    order = Order.objects.get(user=request.user)
+    order = Order.objects.filter(user=request.user)
     if request.method == 'POST':
         response = request.POST
         parms_dict = {

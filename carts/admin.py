@@ -11,3 +11,6 @@ class CartItemAdmin(admin.ModelAdmin):
 
 admin.site.register(Cart, CartAdmin)
 admin.site.register(CartItem, CartItemAdmin)
+admin.site.index_title = 'HKM BOOKS'
+admin.site.site_title = 'HKM BOOKS'
+admin.site.site_header = 'HKM BOOKS'

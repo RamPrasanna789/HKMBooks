@@ -26,7 +26,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool, default=False)
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['hkmbooks-env.eba-d5fzyjmr.us-west-2.elasticbeanstalk.com']
 
 
 # Application definition
@@ -42,10 +42,11 @@ INSTALLED_APPS = [
     'accounts',
     'store',
     'carts',
-    'orders'
+    'orders',
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

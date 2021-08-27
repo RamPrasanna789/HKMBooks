@@ -16,3 +16,6 @@ class OrderAdmin(admin.ModelAdmin):
 admin.site.register(Order, OrderAdmin)
 admin.site.register(Payment)
 admin.site.register(OrderProduct)
+admin.site.index_title = 'HKM BOOKS'
+admin.site.site_title = 'HKM BOOKS'
+admin.site.site_header = 'HKM BOOKS'

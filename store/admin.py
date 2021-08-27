@@ -15,3 +15,6 @@ class VariationAdmin(admin.ModelAdmin):
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Variation, VariationAdmin)
 admin.site.register(ReviewRating)
+admin.site.index_title = 'HKM BOOKS'
+admin.site.site_title = 'HKM BOOKS'
+admin.site.site_header = 'HKM BOOKS'

@@ -38,7 +38,7 @@ class Order(models.Model):
     order_note = models.CharField(max_length=100, blank=True)
     order_total = models.FloatField(blank=True)
     shipping_charges = models.IntegerField()
-    status = models.CharField(max_length=100, choices=STATUS, default='New')
+    status = models.CharField(max_length=100, choices=STATUS, default='Yet To Be Dispatched')
     order_id = models.CharField(max_length=900, blank=True)
     razorpay_order_id = models.CharField(max_length=1000, blank=True)
     ip = models.CharField(blank=True, max_length=20)

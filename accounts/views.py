@@ -190,5 +190,9 @@ def resetPassword(request):
         return render(request, 'accounts/resetPassword.html')
 
 def orders(request):
-    orders_ = Order.objects.filter(user=request.user, is_ordered=True).order_by('-created_at')
+    try:
+        orders_ = Order.objects.filter(user=request.user, is_ordered=True).order_by('-created_at')
+    except:
+        return redirect('login')
+        
     return render(request, 'accounts/my_orders.html', {'orders_': orders_})
