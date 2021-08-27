@@ -83,7 +83,6 @@ AUTH_USER_MODEL = 'accounts.Account'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
 # Database Configuration
 if 'RDS_DB_NAME' in os.environ:
     DATABASES = {
